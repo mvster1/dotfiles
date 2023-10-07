@@ -1,0 +1,9 @@
+call plug#begin('~/.config/nvim/autoload/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()

@@ -14,7 +14,7 @@ sudo dnf update
 
 # installing additional packages
 echo "installing packages..."
-sudo dnf install Xorg bspwm sxhkd polybar feh rofi neovim thunar gimp xfce4-terminal xset ffmpeg neofetch
+sudo dnf install Xorg bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp xfce4-terminal xset ffmpeg neofetch
 echo "updading..."
 sudo dnf update
 

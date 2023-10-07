@@ -4,7 +4,7 @@ syntax on
 colorscheme gruvbox
 set background=dark
 set cursorline
-
+ 
 let g:airline_theme='tomorrow'
 
 " use <tab> to trigger completion and navigate to the next complete item

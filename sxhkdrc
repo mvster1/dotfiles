@@ -4,21 +4,9 @@
 control + alt + @t
 	xfce4-terminal
 
-# volume control
-alt + F4
-	amixer -q sset Master 5%+
-alt + F3
-	amixer -q sset Master 5%-
-alt + F5
-	amixer -q sset Master toggle
-
-# take screenshot of VGA-1 (0) monitor
-alt + F12
-	scrot --monitor 0
-
 # program launcher
 alt + @e
-	rofi -show drun -show-icons -font "Fira Code Retina 11"
+	rofi -show drun -show-icons -font "Martian Mono 12"
 
 # make sxhkd reload its configuration files:
 control + alt + Escape
@@ -46,9 +34,13 @@ super + 4
 	bspc desktop -f ^4
 super + 5
 	bspc desktop -f ^5
+
 # there is no sixth desktop, so this command focuses at "support"
 super + 6
 	bspc desktop -f ^6
+
+super + 7
+	bspc desktop -f ^7
 
 # go to next desktop
 alt + k

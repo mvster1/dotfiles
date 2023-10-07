@@ -7,14 +7,14 @@ echo "installing rpmfusion repo files..."
 sudo dnf install rpmfusion-free-release-38.noarch.rpm
 sudo dnf install rpmfusion-nonfree-release-38.noarch.rpm
 
-rm rpmfusion-free-release-38.noarch.rpm fedorapmfusion-nonfree-release-38.noarch.rpm
+rm rpmfusion-free-release-38.noarch.rpm rpmfusion-nonfree-release-38.noarch.rpm
 
 echo "updating..."
 sudo dnf update
 
 # installing additional packages
 echo "installing packages..."
-sudo dnf install Xorg bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp xfce4-terminal xset ffmpeg neofetch
+sudo dnf install Xorg xinit bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox xfce4-terminal xset xsetroot ffmpeg neofetch
 echo "updading..."
 sudo dnf update
 

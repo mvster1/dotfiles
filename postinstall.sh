@@ -14,18 +14,18 @@ sudo dnf update
 
 # installing additional packages
 echo "installing packages..."
-sudo dnf install Xorg bspwm sxhkd polybar rofi neovim thunar gimp xfce4-terminal xset ffmpeg neofetch
+sudo dnf install Xorg bspwm sxhkd polybar feh rofi neovim thunar gimp xfce4-terminal xset ffmpeg neofetch
 echo "updading..."
 sudo dnf update
 
 # adding Martian Mono fonts
-git clone https://github.com/evilmartians/mono
+echo "downloading and installing MartianMono fonts..."
 mkdir -p ~/.fonts/MartianMono
+git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
 
 # cleaning up
 echo "cleaning things up..."
 sudo dnf autoremove
-sudo dnf clean all
 sudo dnf clean packages
-sudo dnf update
+sudo dnf clean all

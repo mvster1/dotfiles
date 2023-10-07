@@ -14,7 +14,7 @@ sudo dnf update
 
 # installing additional packages
 echo "installing packages..."
-sudo dnf install Xorg xinit bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox xfce4-terminal xset xsetroot ffmpeg neofetch
+sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox xfce4-terminal ffmpeg neofetch
 echo "updading..."
 sudo dnf update
 

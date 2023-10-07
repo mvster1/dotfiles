@@ -6,7 +6,6 @@ xset s noblank
 xset -dpms
 sxhkd &
 xsetroot -cursor_name arrow &
-feh --bg-fill ~/.config/bspwm/wallpapers/embrace-technocrime-wallpaper.png
 bspc monitor VGA-1 -d 1 2 3 4
 bspc monitor HDMI-1 -d 1 2 3 4
 

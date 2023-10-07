@@ -1,28 +1,21 @@
-# Configuration for bspc window control hotkeys
-
 # terminal emulator
 control + alt + @t
 	xfce4-terminal
-
 # program launcher
 alt + @e
 	rofi -show drun -show-icons -font "Martian Mono 12"
-
 # make sxhkd reload its configuration files:
 control + alt + Escape
 	pkill -USR1 -x sxhkd
-
 # quit/restart bspwm
 control + alt + {q,r}
 	bspc {quit,wm -r}
-
 # close window/node
 alt + q
 	bspc node -c
 # kill app & window
 super + alt + k
 	bspc node -k
-
 # goto desktop 1-10
 super + 1
 	bspc desktop -f ^1
@@ -34,47 +27,35 @@ super + 4
 	bspc desktop -f ^4
 super + 5
 	bspc desktop -f ^5
-
 # there is no sixth desktop, so this command focuses at "support"
 super + 6
 	bspc desktop -f ^6
-
 super + 7
 	bspc desktop -f ^7
-
 # go to next desktop
 alt + k
 	bspc desktop -f next
-
 # go to previous desktop
 alt + j
 	bspc desktop -f prev
-
 # alternate between the tiled and monocle layout 
 alt + z
 	bspc desktop -l next
-
 # move window to next desktop
 alt + shift + k
 	bspc node -d next
-
 # move window to previous desktop
 alt + shift + j
 	bspc node -d prev
-
 # set the window state
 alt + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
 # focus the node in the given direction
 alt + shift + {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
-
 # focus the next/previous node in the current desktop
 alt + Tab
 	bspc node -f {next}.local
-	# bspc node -f next.local.!automatic && bspc node -t floating && bspc node -s last.local
-
 # move a floating window
 super + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}

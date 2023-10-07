@@ -1,28 +1,27 @@
 #!/usr/bin/sh
 
+# main configs
+xset s off
+xset s noblank
+xset -dpms
 sxhkd &
-# picom --backend glx --vsync &
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name arrow &
+feh --bg-fill ~/.config/bspwm/wallpapers/embrace-technocrime-wallpaper.png
+bspc monitor VGA-1 -d 1 2 3 4
+bspc monitor HDMI-1 -d 1 2 3 4
 
-# feh --bg-fill /home/master/.config/bspwm/wallpapers/bspwm-default-wallpaper.png
-feh --bg-fill /home/master/.config/bspwm/wallpapers/lainwalledited.jpg
-bspc monitor VGA-1 -d 1 2 3 4 5
-bspc monitor HDMI-1 -d support
-
-bspc config border_width 1
+# border configuring
+bspc config border_width 3
 bspc config top_padding 0
 bspc config bottom_padding 0
-bspc config window_gap 15
+bspc config window_gap 25
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
-# setting node border colors
-# bspc config normal_border_color "#462f4a"
-bspc config normal_border_color "#5b2e63"
-bspc config focused_border_color "#E97CFC"
-# bspc config focused_border_color "#800099"
+# color configuring
+bspc config normal_border_color "#19586d"
+bspc config focused_border_color "#21c8ff"
 
 pkill -x polybar
-polybar topbar -r
-
+polybar bottombar1 -r 

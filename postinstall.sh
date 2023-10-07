@@ -1,7 +1,7 @@
 # installing rpmfusion
 echo "getting rpmfusion repo files (free & non-free)..."
 wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm
-wget https://mirrors.rpmfusion.org/nonfree/fedorapmfusion-nonfree-release-38.noarch.rpm
+wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm
 
 echo "installing rpmfusion repo files..."
 sudo dnf install rpmfusion-free-release-38.noarch.rpm

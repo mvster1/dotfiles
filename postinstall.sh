@@ -18,6 +18,10 @@ sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi
 echo "updading..."
 sudo dnf update
 
+# updating npm and installing yarn
+sudo npm install -g npm@latest
+sudo npm install --global yarn@latest
+
 # adding Martian Mono fonts
 echo "downloading and installing MartianMono fonts..."
 mkdir -p ~/.fonts/MartianMono

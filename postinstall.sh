@@ -18,6 +18,13 @@ sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi
 echo "updading..."
 sudo dnf update
 
+# installing required (and useful) multimedia codecs
+echo "installing multimedia codecs..."
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install lame\* --exclude=lame-devel
+echo "updating..."
+sudo dnf update
+
 # updating npm and installing yarn
 sudo npm install -g npm@latest
 sudo npm install --global yarn@latest
@@ -28,11 +35,12 @@ mkdir -p ~/.fonts/MartianMono
 git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
 
-# disabling plymouth's splash theme
+# disabling plymouth's splash theme (setting it to "details")
 sudo plymouth-set-default-theme details -R
 
 # cleaning up
 echo "cleaning things up..."
 sudo dnf autoremove
 sudo dnf clean packages
-sudo dnf clean all
+sudo dnf clean all 
+# after this, the dnf metadata will be regenerated when running dnf again, which usually takes a short while

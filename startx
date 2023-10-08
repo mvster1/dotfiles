@@ -11,6 +11,9 @@
 # Site administrators are STRONGLY urged to write nicer versions.
 #
 
+# THIS FILE IS PART OF mvster1/dotfiles REPOSITORY AND IS CHANGED TO SUIT CUSTOM SETTINGS
+# THIS FILE MUST BE PLACED AT /usr/bin/
+
 unset DBUS_SESSION_BUS_ADDRESS
 unset SESSION_MANAGER
 userclientrc=$HOME/.xinitrc

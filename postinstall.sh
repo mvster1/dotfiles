@@ -24,6 +24,9 @@ mkdir -p ~/.fonts/MartianMono
 git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
 
+# disabling plymouth's splash theme
+sudo plymouth-set-default-theme details -R
+
 # cleaning up
 echo "cleaning things up..."
 sudo dnf autoremove

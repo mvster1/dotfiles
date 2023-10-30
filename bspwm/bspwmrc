@@ -4,24 +4,37 @@
 xset s off
 xset s noblank
 xset -dpms
-xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 16 &
 
+# setting the cursor
+xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 16 &
+
+# launching sxhkd
 sxhkd &
-bspc monitor VGA-1 -d 1 2 3 4
-bspc monitor HDMI-1 -d 1 2 3 4
 
-# border configuring
-bspc config border_width 2
+# defining workspaces for each monitor
+bspc monitor VGA-1 -d 1 2 3 4 5
+bspc monitor HDMI-1 -d 1 2 3 4 5
+
+# nodes config
+bspc config border_width 1
 bspc config top_padding 0
 bspc config bottom_padding 0
-bspc config window_gap 15
+bspc config window_gap 5
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
+
+# blue borders
 bspc config normal_border_color "#19586d"
 bspc config focused_border_color "#21c8ff"
 
+# defining certain apps to launch as floating
+bspc rule -a Pavucontrol state=floating
+bspc rule -a com-azefsw-audioconnect-desktop-app-MainKt state=floating
+
+# merging or "sourcing" the .Xresources configs
 xrdb -merge ~/.Xresources
 
+# killing and relaunching polybar
 pkill -x polybar
 polybar bottombar1 -r 

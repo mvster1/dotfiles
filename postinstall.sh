@@ -15,6 +15,10 @@ sudo dnf update
 # installing additional packages
 echo "installing packages..."
 sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox kitty ffmpeg nodejs pulseaudio pavucontrol neofetch
+
+# installing additional fonts
+sudo dnf group install fonts
+
 echo "updading..."
 sudo dnf update
 

@@ -5,11 +5,7 @@ export ZSH_COMPDUMP=/home/mvster/.cache/.zcompdump-$HOST
 ZSH_THEME="bira"
 
 plugins=(
-
 	git
-	zsh-autosuggestions
-	colors
-
 )
 
 source $ZSH/oh-my-zsh.sh

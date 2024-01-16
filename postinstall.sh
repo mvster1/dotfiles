@@ -3,38 +3,40 @@ echo "getting rpmfusion repo files (free & non-free)..."
 wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm
 wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm
 
-echo "installing rpmfusion repo files..."
+echo "\ninstalling rpmfusion repo files..."
 sudo dnf install rpmfusion-free-release-38.noarch.rpm
 sudo dnf install rpmfusion-nonfree-release-38.noarch.rpm
 
 rm rpmfusion-free-release-38.noarch.rpm rpmfusion-nonfree-release-38.noarch.rpm
 
-echo "updating..."
+echo "\nupdating..."
 sudo dnf update
 
 # installing additional packages
-echo "installing packages..."
+echo "\ninstalling packages..."
 sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox kitty ffmpeg nodejs pulseaudio pavucontrol neofetch libXinerama cups-libs dbus-glib
 
 # installing additional fonts
 sudo dnf group install fonts
 
-echo "updading..."
+echo "\nupdading..."
 sudo dnf update
 
 # installing required (and useful) multimedia codecs
-echo "installing multimedia codecs..."
+echo "\ninstalling multimedia codecs..."
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install lame\* --exclude=lame-devel
-echo "updating..."
+
+echo "\nupdating..."
 sudo dnf update
 
 # updating npm and installing yarn
+echo "\nupdating npm and installing yarn"
 sudo npm install -g npm@latest
 sudo npm install --global yarn@latest
 
 # adding Martian Mono fonts
-echo "downloading and installing MartianMono fonts..."
+echo "\ndownloading and installing MartianMono fonts..."
 mkdir -p ~/.fonts/MartianMono
 git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
@@ -43,7 +45,7 @@ mv mono ~/.fonts/MartianMono/
 sudo plymouth-set-default-theme details -R
 
 # cleaning up
-echo "cleaning things up..."
+echo "\ncleaning things up..."
 sudo dnf autoremove
 sudo dnf clean packages
 sudo dnf clean all 

@@ -1,10 +1,15 @@
-# terminal emulator
-alt + @t
+alt + shift + @p
+	flameshot gui
+
+control + alt + @t
 	kitty
 
 # program launcher
 alt + @e
-	rofi -show drun -show-icons -font "Martian Mono Condensed 12"
+	rofi -show drun -show-icons -font "Martian Mono Condensed SemiBold 9"
+
+alt + @p
+	pavucontrol
 
 # make sxhkd reload its configuration files:
 control + alt + Escape
@@ -43,6 +48,10 @@ super + 7
 	bspc desktop -f ^7
 super + 8 
 	bspc desktop -f ^8
+super + 9
+	bspc desktop -f ^9
+super + 0
+	bspc desktop -f ^10
 
 # go to next desktop
 alt + k

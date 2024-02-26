@@ -1,20 +1,20 @@
 # installing rpmfusion
 echo "getting rpmfusion repo files (free & non-free)..."
-wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm
-wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm
+wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm
+wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm
 
 echo "\ninstalling rpmfusion repo files..."
-sudo dnf install rpmfusion-free-release-38.noarch.rpm
-sudo dnf install rpmfusion-nonfree-release-38.noarch.rpm
+sudo dnf install rpmfusion-free-release-39.noarch.rpm
+sudo dnf install rpmfusion-nonfree-release-39.noarch.rpm
 
-rm rpmfusion-free-release-38.noarch.rpm rpmfusion-nonfree-release-38.noarch.rpm
+rm rpmfusion-free-release-39.noarch.rpm rpmfusion-nonfree-release-39.noarch.rpm
 
 echo "\nupdating..."
 sudo dnf update
 
 # installing additional packages
 echo "\ninstalling packages..."
-sudo dnf install Xorg xinit xset xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox kitty ffmpeg nodejs pulseaudio pavucontrol neofetch libXinerama cups-libs dbus-glib
+sudo dnf install Xorg xinit xset flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox kitty ffmpeg nodejs pulseaudio pavucontrol neofetch libXinerama cups-libs dbus-glib
 
 # installing additional fonts
 sudo dnf group install fonts
@@ -40,6 +40,11 @@ echo "\ndownloading and installing MartianMono fonts..."
 mkdir -p ~/.fonts/MartianMono
 git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
+
+# adding SF font pack
+echo "\ndownloading and installing SF fonts..."
+git clone https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts
+mv San-Francisco-Pro-Fonts ~/.fonts/
 
 # disabling plymouth's splash theme (setting it to "details")
 sudo plymouth-set-default-theme details -R

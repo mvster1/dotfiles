@@ -5,11 +5,11 @@ xset s off
 xset s noblank
 xset -dpms
 
-# setting the cursor
-xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 16 &
+xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 8 &
 
-# launching sxhkd
+picom &
 sxhkd &
+lxpolkit &
 
 # defining workspaces for each monitor
 bspc monitor VGA-1 -d 1 2 3 4 5
@@ -19,14 +19,18 @@ bspc monitor HDMI-1 -d 1 2 3 4 5
 bspc config border_width 1
 bspc config top_padding 0
 bspc config bottom_padding 0
-bspc config window_gap 12
+bspc config window_gap 18
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
-# blue borders
-bspc config normal_border_color "#19586d"
-bspc config focused_border_color "#21c8ff"
+# bspc config normal_border_color "#19586d"
+
+# blue
+# bspc config focused_border_color "#21c8ff"
+
+# pink
+bspc config focused_border_color "#b53c34"
 
 # defining certain apps to launch as floating
 bspc rule -a Pavucontrol state=floating
@@ -37,4 +41,4 @@ xrdb -merge ~/.Xresources
 
 # killing and relaunching polybar
 pkill -x polybar
-polybar bottombar1 -r 
+polybar mainbar -r 

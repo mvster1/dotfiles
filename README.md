@@ -1,2 +1,2 @@
-# DotFiles
-Fedora 39 personal dotfiles - bspwm + sxhkd desktop.
+# dotfiles
+fedora 40 personal dotfiles

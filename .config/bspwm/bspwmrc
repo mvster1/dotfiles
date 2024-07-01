@@ -5,40 +5,53 @@ xset s off
 xset s noblank
 xset -dpms
 
-xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 8 &
+feh --bg-fill /home/mvster/vault/wallpapers/whitestuff.jpg # defining wallpaper
 
-picom &
-sxhkd &
+xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 16 & # defining cursor file
+
+sxhkd -c /home/mvster/.config/sxhkd/sxhkdrc &
+# picom --config ~/.config/picom/picom.conf &
 lxpolkit &
+xbanish &
+xdotool mousemove 1 1 &
 
 # defining workspaces for each monitor
-bspc monitor VGA-1 -d 1 2 3 4 5
-bspc monitor HDMI-1 -d 1 2 3 4 5
+# bspc monitor VGA-1 -d • • • •
+# bspc monitor HDMI-1 -d • • • •
+bspc monitor VGA-1 -d 1 2 3 4 
+bspc monitor HDMI-1 -d 4 3 2 1
 
 # nodes config
-bspc config border_width 1
-bspc config top_padding 0
-bspc config bottom_padding 0
-bspc config window_gap 18
+# for side in top right bottom left; do bspc config ${side}_monocle_padding -15; done # fixing the padding for the screen sizes
+bspc config border_width 2
+bspc config window_gap 5
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
-# bspc config normal_border_color "#19586d"
+# node padding options
+bspc config top_padding 0
+bspc config right_padding 0
+bspc config bottom_padding 0
+bspc config left_padding 0
 
-# blue
-# bspc config focused_border_color "#21c8ff"
-
-# pink
-bspc config focused_border_color "#b53c34"
+# setting focused border color
+# bspc config focused_border_color "#FFFFFF"
+# bspc config normal_border_color "#6e6b6b"
+bspc config focused_border_color "#15adb0"
 
 # defining certain apps to launch as floating
-bspc rule -a Pavucontrol state=floating
-bspc rule -a com-azefsw-audioconnect-desktop-app-MainKt state=floating
+bspc rule -a pavucontrol state=floating
+bspc rule -a Galculator state=floating
+bspc rule -a Picture-in-Picture state=floating
 
 # merging or "sourcing" the .Xresources configs
 xrdb -merge ~/.Xresources
 
-# killing and relaunching polybar
-pkill -x polybar
-polybar mainbar -r 
+# killing and relaunching polybar's bars
+pkill -x polybar 
+polybar mainbar -r &
+polybar secondbar -r &
+
+# applying custom wacom board configurations
+source ~/wacom_settings.sh

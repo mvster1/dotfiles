@@ -1,15 +1,29 @@
-alt + shift + @p
+#!/usr/bin/sh
+alt + shift + p
 	flameshot gui
 
-control + alt + @t
+control + alt + t
 	kitty
+control + super + t
+	gtk-launch tmux
 
 # program launcher
-alt + @e
-	rofi -show drun -show-icons -font "Martian Mono Condensed SemiBold 9"
+alt + e
+	rofi -show drun -show-icons -font "Spline Sans Mono Regular 10"
 
-alt + @p
+super + shift + p
+	pkill picom
+
+control + super + p
+	picom
+
+alt + p
 	pavucontrol
+
+alt + F1
+	xrandr --output HDMI-1 --mode 1360x768
+alt + F2
+	xrandr --output HDMI-1 --mode 1920x1080
 
 # make sxhkd reload its configuration files:
 control + alt + Escape

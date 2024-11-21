@@ -11,10 +11,15 @@ rm rpmfusion-free-release-40.noarch.rpm rpmfusion-nonfree-release-40.noarch.rpm
 sudo dnf update
 
 # installing additional packages
-sudo dnf install Xorg xinit xset flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp firefox kitty ffmpeg nodejs pulseaudio pavucontrol libXinerama cups-libs dbus-glib fastfetch
+sudo dnf install Xorg xinit xset flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp kitty ffmpeg nodejs pulseaudio pavucontrol libXinerama cups-libs dbus-glib fastfetch
+
+# installing librewolf browser
+curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+sudo dnf install librewolf
 
 # installing additional fonts
 sudo dnf group install fonts
+sudo dnf install google-noto-sans-symbols-fonts
 
 # updating
 sudo dnf update
@@ -34,6 +39,13 @@ sudo npm install --global yarn@latest
 mkdir -p ~/.fonts/MartianMono
 git clone https://github.com/evilmartians/mono
 mv mono ~/.fonts/MartianMono/
+
+# adding hack fonts
+mkdir -p ~/.fonts/Hack
+wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+unzip Hack-v3.003-ttf.zip
+mv ttf ~/.fonts/Hack
+rm -Rf Hack-v3.003-ttf.zip
 
 # adding SF font pack
 git clone https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts

@@ -1,0 +1,39 @@
+[font]
+size = 9
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack"
+style = "Bold"
+
+[font.italic]
+family = "Hack"
+style = "Bold"
+
+[font.normal]
+family = "Hack"
+style = "Bold"
+
+[keyboard]
+bindings = [
+	{ key = "t", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[cursor]
+style = { shape = "block", blinking = "never" }
+# blink_interval = 400
+# blink_timeout = 0 
+
+[colors]
+cursor = { text = "#000000", cursor = "#000000" }
+
+[window]
+title = "Alacritty"
+
+[general]
+import = [
+	"/home/mvster/.config/alacritty/themes/alacritty-theme/themes/alabaster.toml"
+]

@@ -11,7 +11,7 @@ rm rpmfusion-free-release-40.noarch.rpm rpmfusion-nonfree-release-40.noarch.rpm
 sudo dnf update
 
 # installing additional packages
-sudo dnf install Xorg xinit xset flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp kitty ffmpeg nodejs pulseaudio pavucontrol libXinerama cups-libs dbus-glib fastfetch
+sudo dnf install Xorg xinit xset xbanish xdotool lxpolkit flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp kitty ffmpeg nodejs pulseaudio pavucontrol libXinerama cups-libs dbus-glib fastfetch
 
 # installing librewolf browser
 curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo

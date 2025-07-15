@@ -1,21 +1,17 @@
 # installing rpmfusion
-wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-40.noarch.rpm
-wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-40.noarch.rpm
+wget https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-42.noarch.rpm
+wget https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm
 
-sudo dnf install rpmfusion-free-release-40.noarch.rpm
-sudo dnf install rpmfusion-nonfree-release-40.noarch.rpm
+sudo dnf install rpmfusion-free-release-42.noarch.rpm
+sudo dnf install rpmfusion-nonfree-release-42.noarch.rpm
 
-rm rpmfusion-free-release-40.noarch.rpm rpmfusion-nonfree-release-40.noarch.rpm
+rm rpmfusion-free-release-42.noarch.rpm rpmfusion-nonfree-release-42.noarch.rpm
 
 # updating (important on this step)
 sudo dnf update
 
 # installing additional packages
 sudo dnf install Xorg xinit xset xbanish xdotool lxpolkit flameshot xsetroot bspwm sxhkd polybar arc-theme feh rofi neovim thunar gimp kitty ffmpeg nodejs pulseaudio pavucontrol libXinerama cups-libs dbus-glib fastfetch
-
-# installing librewolf browser
-curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
-sudo dnf install librewolf
 
 # installing additional fonts
 sudo dnf group install fonts

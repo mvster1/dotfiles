@@ -20,9 +20,9 @@ control + super + p
 alt + p
 	pavucontrol
 
-alt + F1
+super + alt + F1
 	xrandr --output HDMI-1 --mode 1360x768
-alt + F2
+super + alt + F2
 	xrandr --output HDMI-1 --mode 1920x1080
 
 # make sxhkd reload its configuration files:

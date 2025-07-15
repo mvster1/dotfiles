@@ -35,5 +35,5 @@ title = "Alacritty"
 
 [general]
 import = [
-	"/home/mvster/.config/alacritty/themes/alacritty-theme/themes/alabaster.toml"
+	"$HOME/.config/alacritty/themes/alacritty-theme/themes/alabaster.toml"
 ]

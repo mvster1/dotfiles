@@ -5,11 +5,11 @@ xset s off
 xset s noblank
 xset -dpms
 
-feh --bg-fill /home/mvster/vault/wallpapers/whitestuff.jpg # defining wallpaper
+feh --bg-fill $HOME/vault/wallpapers/whitestuff.jpg # defining wallpaper
 
 xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 16 & # defining cursor file
 
-sxhkd -c /home/mvster/.config/sxhkd/sxhkdrc &
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 # picom --config ~/.config/picom/picom.conf &
 lxpolkit &
 xbanish &

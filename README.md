@@ -24,7 +24,7 @@ This repository contains all the necessary configuration files to replicate my s
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/dotfiles.git](https://github.com/your-username/dotfiles.git) ~/.dotfiles
+        git clone https://github.com/mvster1/dotfiles.git
     ```
 
 2.  **Run the post-installation script:**

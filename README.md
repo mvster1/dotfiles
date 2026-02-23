@@ -12,7 +12,7 @@ This repository contains all the necessary configuration files to replicate my s
 * **Hotkey Daemon**: [sxhkd](https://github.com/baskerville/sxhkd) - A simple X hotkey daemon for bspwm.
 * **Panel**: [Polybar](https://github.com/polybar/polybar) - A fast and easy-to-use status bar.
 * **Terminal Emulator**: [Kitty](https://sw.kovidgoyal.net/kitty/) - A fast, feature-rich, GPU-based terminal emulator.
-* **Application Launcher**: - A window switcher, application launcher, and dmenu replacement.
+* **Application Launcher**: Rofi - A window switcher, in this case used only as an application launcher, and dmenu replacement.
 * **Compositor**: [Picom](https://github.com/yshui/picom) - A lightweight compositor for X11 (previously Compton).
 * **Shell**: [Zsh](https://www.zsh.org/) with [Oh My Zsh](https://ohmyz.sh/) - A powerful and customizable shell.
 * **GTK Theme**: Custom GTK-2.0, GTK-3.0, and GTK-4.0 settings for a consistent look and feel across applications.
